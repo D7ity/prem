@@ -4,53 +4,26 @@
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
-local Hotbar = Instance.new("Frame")
-local Profile = Instance.new("ImageButton")
-local UICorner = Instance.new("UICorner")
-local UICorner_2 = Instance.new("UICorner")
 local Login = Instance.new("Frame")
 local Username = Instance.new("TextBox")
 local Login_2 = Instance.new("TextLabel")
 local Password = Instance.new("TextBox")
 local Proceed = Instance.new("TextButton")
 local LoginFrameColor = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Hotbar = Instance.new("ImageLabel")
+local Profile = Instance.new("ImageButton")
 
 --Properties:
 
 ScreenGui.Parent = game.CoreGui
 
-Hotbar.Name = "Hotbar"
-Hotbar.Parent = ScreenGui
-Hotbar.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-Hotbar.BorderSizePixel = 0
-Hotbar.Position = UDim2.new(0.241893083, 0, 0.83463341, 0)
-Hotbar.Size = UDim2.new(0, 512, 0, 84)
-
-Profile.Name = "Profile"
-Profile.Parent = Hotbar
-Profile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Profile.BackgroundTransparency = 1.000
-Profile.Position = UDim2.new(0.0323077627, 0, 0.141176462, 0)
-Profile.Size = UDim2.new(0, 59, 0, 61)
-Profile.Image = "http://www.roblox.com/asset/?id=10763634556"
-if Profile.MouseButton1Down:Connect(function()
-		Login.Visible = true
-	end)
-end
-
-UICorner.CornerRadius = UDim.new(0.25, 0)
-UICorner.Parent = Profile
-
-UICorner_2.CornerRadius = UDim.new(0.25, 0)
-UICorner_2.Parent = Hotbar
-
 Login.Name = "Login"
 Login.Parent = ScreenGui
 Login.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Login.BorderSizePixel = 0
-Login.Position = UDim2.new(0.183172673, 0, 0.491419643, 0)
+Login.Position = UDim2.new(0.401402295, 0, 0.358271241, 0)
 Login.Size = UDim2.new(0, 225, 0, 204)
-Login.Visible = false
 
 Username.Name = "Username"
 Username.Parent = Login
@@ -116,3 +89,33 @@ LoginFrameColor.Parent = Login
 LoginFrameColor.BackgroundColor3 = Color3.fromRGB(81, 76, 255)
 LoginFrameColor.BorderSizePixel = 0
 LoginFrameColor.Size = UDim2.new(0, 12, 0, 204)
+
+UICorner.CornerRadius = UDim.new(0.0250000004, 0)
+UICorner.Parent = LoginFrameColor
+
+Hotbar.Name = "Hotbar"
+Hotbar.Parent = ScreenGui
+Hotbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hotbar.BackgroundTransparency = 1.000
+Hotbar.Position = UDim2.new(0.275197208, 0, 0.837407351, 0)
+Hotbar.Size = UDim2.new(0, 512, 0, 84)
+Hotbar.Image = "rbxassetid://3570695787"
+Hotbar.ImageColor3 = Color3.fromRGB(24, 24, 24)
+Hotbar.ScaleType = Enum.ScaleType.Slice
+Hotbar.SliceCenter = Rect.new(100, 100, 100, 100)
+Hotbar.SliceScale = 0.120
+
+Profile.Name = "Profile"
+Profile.Parent = Hotbar
+Profile.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Profile.BackgroundTransparency = 1.000
+Profile.Position = UDim2.new(0.104573399, 0, 0.129271701, 0)
+Profile.Size = UDim2.new(0, 59, 0, 61)
+Profile.Image = "http://www.roblox.com/asset/?id=10763634556"
+Profile.MouseButton1Down:Connect(function() 
+	if Login.Visible = false then
+		Login.Visible = true
+	elseif Login = Login.Visible = true then
+		Login.Visible = false
+	end
+end)
