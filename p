@@ -112,10 +112,9 @@ Profile.BackgroundTransparency = 1.000
 Profile.Position = UDim2.new(0.104573399, 0, 0.129271701, 0)
 Profile.Size = UDim2.new(0, 59, 0, 61)
 Profile.Image = "http://www.roblox.com/asset/?id=10763634556"
-Profile.MouseButton1Down:Connect(function() 
-	if Login.Visible = false then
-		Login.Visible = true
-	elseif Login = Login.Visible = true then
-		Login.Visible = false
-	end
-end)
+if	Profile.MouseButton1Down:Connect()  then
+	Login.Visible = true
+elseif Login.Visible = true then
+	Login.Visible = false
+end
+	
